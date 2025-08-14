@@ -10,54 +10,50 @@ int main(){
     srand(time(NULL));
     while(true){
         pf=rand()%3+1;
-        cout<<"1-)tas 2-)kagit 3-)Makas"<<endl;
-        cout<<"Seciminiz girininiz:"<<endl;
+        cout<<"1-)Stone 2-)Paper 3-)Scissors"<<endl;
+        cout<<"Your choice:"<<endl;
         cin>>kf;
         if(kf==pf){
-            cout<<"BERABERE"<<endl;
+            cout<<"DRAW"<<endl;
         }
         else if(kf==1&&pf==2){
-            cout<<"YENILGI"<<endl;
+            cout<<"LOSE"<<endl;
             pp++;
         }
         else if(kf==1&&pf==3){
-            cout<<"ZAFER"<<endl;
+            cout<<"WİN"<<endl;
             kp++;
         }
         else if(kf==2&&pf==1){
-            cout<<"ZAFER"<<endl;
+            cout<<"WİN"<<endl;
             kp++;
         }
         else if(kf==2&&pf==3){
-            cout<<"YENİLGİ"<<endl;
+            cout<<"LOSE"<<endl;
             pp++;
         }
         else if(kf==3&&pf==1){
-            cout<<"YENİLGİ"<<endl;
+            cout<<"LOSE"<<endl;
             pp++;
         }
         else if(kf==3&&pf==2){
-            cout<<"ZAFER"<<endl;
+            cout<<"WİN"<<endl;
             kp++;
         }
         else{
-            cout<<"GECERSIZ SECIM"<<endl;
+            cout<<"INVALID ELECTION"<<endl;
         }
         if(kp==5||pp==5){
-            cout<<"-SKOR TABLOSU-"<<endl;
-            cout<<"SEN:"<<kp<<endl;
+            cout<<"-LEADERBOARD-"<<endl;
+            cout<<"YOU:"<<kp<<endl;
             cout<<"PC:"<<pp<<endl;
             if(kp==5){
-                cout<<"-SONUC-"<<endl;
-                cout<<"ZAFER"<<endl;
+                cout<<"-RESULT-"<<endl;
+                cout<<"YOU WIN"<<endl;
             }
             else if(pp==5){
-                cout<<"-SONUC-"<<endl;
-                cout<<"-YENİLGİ-"<<endl;
-            }
-            else{
-                cout<<"-SONUC-";
-                cout<<"BERABERE";
+                cout<<"-RESULT-"<<endl;
+                cout<<"-YOU LOSE-"<<endl;
             }
             break;
         }
